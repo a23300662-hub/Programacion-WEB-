@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="CSS/libro.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Gestor Escolar</title>
+</head>
+
+<body>
+    <!--encabezado -->
+    <header class="cabeza">
+        <img src="CSS/libro.png" alt="libroski" height="80" width="100">
+        <h1>Gestor Escolar</h1>
+    </header>
+
+    <form class="grid grid-cols-1 gap-5" data-bs-validate novalidate action="http://localhost:3000/actividades" method="post">
+        <!--Acomodo de la parte superior-->
+        <div class="grid gap-5">
+            <div class="form-field md:g-col-6">
+                <!--nombre de la actividad-->
+                <label for="validationCustom01" class="form-label">Nombre de la actividad</label>
+                <input type="text" class="form-control" id="validationCustom01" name="nombre" required
+                    aria-describedby="validationCustom01Feedback">
+                <div id="validationCustom01Feedback" class="invalid-feedback">Nombre no valido</div>
+                <!--mensaje de error nomAct-->
+            </div>
+            <div class="form-field md:g-col-6">
+                <!--nombre de la materia-->
+                <label for="validationCustomUsername" class="form-label">Nombre de la materia</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend validationCustomUsernameFeedback" name="materia" required>
+                </div>
+                <div id="validationCustomUsernameFeedback" class="invalid-feedback">Materia no valida</div>
+                <!--mensaje de error nomMat-->
+            </div>
+        </div>
+        <div class="grid gap-5">
+            <!--Acomodo por debajo-->
+            <div class="form-field md:g-col-4">
+                <!--Estado de la tarea-->
+                <label for="validationCustom04" class="form-label">Estado</label>
+                <select class="form-control" id="validationCustom04" disabled>
+                    <option>Pendiente</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <!--Campos de prioridad-->
+            <label class="form-label">Prioridad</label>
+            <div class="form-field mb-1">
+                <!--prioridad Alta-->
+                <input type="radio" id="validationCustomRadio1" class="radio"  name="prioridad" value="Alta" required>
+                <div class="form-field-content">
+                    <label for="validationCustomRadio1">Alta</label>
+                    <small class="form-text">Entregala sí o sí.</small>
+                </div>
+            </div>
+            <div class="form-field">
+                <!--prioridad Media-->
+                <input type="radio" id="validationCustomRadio2" class="radio"  name="prioridad" value="Media" required>
+                <div class="form-field-content">
+                    <label for="validationCustomRadio2">Media</label>
+                    <small class="form-text">Te afecta, pero no es para tanto.</small>
+                </div>
+            </div>
+            <div class="form-field">
+                <!--prioridad Baja-->
+                <input type="radio" id="validationCustomRadio2" class="radio" name="prioridad" value="Baja" required>
+                <div class="form-field-content">
+                    <label for="validationCustomRadio2">Baja</label>
+                    <small class="form-text">No te preocupes.</small>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button class="btn-solid theme-primary justify-self-start" class="botonin" type="submit">Registrar</button>
+            <button class="btn-solid theme-primary justify-self-start" class="botonin" type="reset">Limpiar</button>
+        </div>
+    </form>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

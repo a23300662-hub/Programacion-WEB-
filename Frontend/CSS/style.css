@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabeza{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.641);
+    box-shadow: 0 4px 12px rgba(213, 211, 211, 0.08);
+    padding: 16px 24px;
+
+    h1{
+        margin-top: 20px;
+    }
+}
+
+.botonin{
+    display: flex;
+    gap: 15px;
+    color:blue;
+}
+
+form{
+    padding: 20px;
+}
+
+label, select{
+    padding: 5px;
+}
+input{
+    margin-top: 10px;
+    padding: 5px;
+}

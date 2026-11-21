@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="CSS/libro.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Mis actividades</title>
+</head>
+
+<body>
+    <!-- encabezado -->
+    <header class="cabeza">
+        <img src="CSS/libro.png" alt="libroski" height="80" width="100">
+        <h1>Mis actividades</h1>
+    </header>
+
+    <main>
+        <a href="index.html" class="btn-solid theme-primary">Nueva actividad</a>
+
+        <!-- mensaje de error o de tabla vacía -->
+        <p id="mensaje"></p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Materia</th>
+                    <th>Prioridad</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-actividades">
+                <!-- las filas se generan con JavaScript -->
+            </tbody>
+        </table>
+    </main>
+    <script src="JS/scriptnuevo.js"></script>
+</body>
+
+</html>
